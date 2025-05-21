@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt update && sudo apt upgrade -y
+sudo apt update && sudo apt full-upgrade -y
 
 sudo apt-get install -y wget curl git thunar
 sudo apt-get install -y arandr flameshot arc-theme feh i3blocks i3status i3 i3-wm lxappearance python3-pip rofi unclutter cargo compton papirus-icon-theme imagemagick
