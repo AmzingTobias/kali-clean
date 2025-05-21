@@ -45,7 +45,11 @@ cp -r .wallpaper ~/.wallpaper
 setxkbmap gb
 sudo timedatectl set-timezone Europe/London
 
+sudo apt install bloodhound
+sudo runuser -u postgres -- psql -c 'ALTER DATABASE postgres REFRESH COLLATION VERSION; ALTER DATABASE template1 REFRESH COLLATION VERSION;'
+
 echo "Done! Grab some wallpaper and run pywal -i filename to set your color scheme. To have the wallpaper set on every boot edit ~.fehbg"
 echo "After reboot: Select i3 on login, run lxappearance and select arc-dark"
+echo "Don't forget to run sudo bloodhound-setup to initialise BloodHound"
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
