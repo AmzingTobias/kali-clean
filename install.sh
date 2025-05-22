@@ -42,7 +42,7 @@ cp .fehbg ~/.fehbg
 cp .config/i3/clipboard_fix.sh ~/.config/i3/clipboard_fix.sh
 cp -r .wallpaper ~/.wallpaper 
 
-setxkbmap gb
+sudo sed -i 's/^XKBLAYOUT=.*/XKBLAYOUT="gb"/' /etc/default/keyboard
 sudo timedatectl set-timezone Europe/London
 
 sudo apt install bloodhound -y
