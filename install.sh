@@ -45,7 +45,7 @@ cp -r .wallpaper ~/.wallpaper
 setxkbmap gb
 sudo timedatectl set-timezone Europe/London
 
-sudo apt install bloodhound
+sudo apt install bloodhound -y
 sudo runuser -u postgres -- psql -c 'ALTER DATABASE postgres REFRESH COLLATION VERSION; ALTER DATABASE template1 REFRESH COLLATION VERSION;'
 
 echo "Done! Grab some wallpaper and run pywal -i filename to set your color scheme. To have the wallpaper set on every boot edit ~.fehbg"
