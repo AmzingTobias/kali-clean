@@ -48,6 +48,7 @@ cp -r .wallpaper ~/.wallpaper
 sudo sed -i 's/^XKBLAYOUT=.*/XKBLAYOUT="gb"/' /etc/default/keyboard
 sudo timedatectl set-timezone Europe/London
 
+sudo apt install seclists -y
 sudo apt install bloodhound -y
 sudo runuser -u postgres -- psql -c 'ALTER DATABASE postgres REFRESH COLLATION VERSION; ALTER DATABASE template1 REFRESH COLLATION VERSION;'
 
